@@ -2,7 +2,7 @@ import './index.css';
 import Spinner from "react-spinkit";
 import {useState, useRef, useCallback } from 'react';
 import SearchHook from './SearchHook';
-
+import {IoBookSharp} from 'react-icons/io5'
 
 function App() {
   const dialouge="Please enter the title of the book or the author or the genre of the book in the search available at the top right corner of the page."
@@ -25,6 +25,7 @@ function App() {
     <>
     <nav className='title'>Library Managment
     <input value={query} onChange={(e)=>setQuery(e.target.value)} placeholder="Book Title / Author / Subject"></input>
+    <p style={{float:"center", color:"white"}}>Results:{books.length}</p>
     </nav>
     {
       books.length===0
@@ -44,30 +45,46 @@ function App() {
       )
       :(
         <section className='Items_List'>
-          <div style={{background:"whitesmoke", width:"100vw", height:"100%"}}>
           {
             books.map((book, index)=>{
               if(books.length === index+1){
                 return (
                   <>
-                  <div key={book} ref={lastBookRef}>{book}</div>
+                  <Item key={book} ref={lastBookRef} item={book}>{book}</Item>
+                  <center>
                   <Spinner name="wordpress" style={{ width: 100, height: 100, color:"#8cd3ff"}}/>
+                  </center>
                   </>
                 )
               }else{
                 return (
-                  <div key={book}>{book}</div>
+                  <>
+                  <Item key={book} item={book}>{book}</Item>
+                  </>
+            
                 )
               }
             })
           }
-          </div>
+          {/* <div style={{background:"whitesmoke", width:"100vw", height:"100%"}}>
+          </div> */}
         </section>
       )
     }
     </>
   );
 }
+
+const Item = (props)=>{
+  console.log("props:",props)
+  
+  return (
+      <div className="Item">
+        <IoBookSharp style={{width:"3vw", height:"3vh"}}/>
+        <h3>{props.item}</h3>
+      </div>
+
+  )}
 
 
 export default App;

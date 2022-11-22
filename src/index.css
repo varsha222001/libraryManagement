@@ -29,7 +29,7 @@ code {
   }
 @media screen {
   .Items_List {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   }
   
@@ -38,7 +38,7 @@ code {
   } 
   
   .Item {
-  background: white;
+  background: whitesmoke;
   border-radius: 1rem;
   padding: 1rem 2rem;
   
@@ -47,20 +47,14 @@ code {
   
   .Item h1 {
   color: black;
-  background: white;
   }
   
-  .Item img {
-  width: 125px;
-  height: 125px;
-  align-items: center;
-  }
 
   input{
     float:right;
-    width: 25%;
+    width: 20%;
     height:5vh;
-    margin-right: 5%;
+    margin-right: 5vw;
   }
 
   .Dialouge{
@@ -68,4 +62,10 @@ code {
     background-color: whitesmoke;
     justify-content: left;
     text-align: left;
+  }
+
+  p{
+    font-size: small;
+    float: right;
+    margin-right: 2vw;
   }
