@@ -1,1 +1,0 @@
-export const INSERT_DATA_REDUX = "INSERT_DATA_REDUX"

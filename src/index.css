@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  background: #3D3D3D;
+  background: #222222;
 }
 
 code {
@@ -16,11 +16,11 @@ code {
   color: white;
   font-size: 5vh;
   padding-top: 1vh;
+  
 }
 
 .Items_List {
   width: 90vm;
-  max-width: 1170px;
   margin: 5rem auto;
   margin-top: 2rem;
   display: grid;
@@ -29,7 +29,7 @@ code {
   }
 @media screen {
   .Items_List {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   }
   
@@ -51,7 +51,21 @@ code {
   }
   
   .Item img {
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
   align-items: center;
+  }
+
+  input{
+    float:right;
+    width: 25%;
+    height:5vh;
+    margin-right: 5%;
+  }
+
+  .Dialouge{
+    width: 50%;
+    background-color: whitesmoke;
+    justify-content: left;
+    text-align: left;
   }
