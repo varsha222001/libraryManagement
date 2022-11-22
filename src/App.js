@@ -44,13 +44,13 @@ function App() {
       )
       :(
         <section className='Items_List'>
-          <div style={{width:"100%", background:"whitesmoke"}}>
+          <div style={{background:"whitesmoke", width:"100vw", height:"100%"}}>
           {
             books.map((book, index)=>{
               if(books.length === index+1){
                 return (
                   <>
-                  <Item key={book} ref={lastBookRef}>{book}</Item>
+                  <div key={book} ref={lastBookRef}>{book}</div>
                   <Spinner name="wordpress" style={{ width: 100, height: 100, color:"#8cd3ff"}}/>
                   </>
                 )
@@ -67,14 +67,6 @@ function App() {
     }
     </>
   );
-}
-
-
-const Item = (props)=>{
-  const {title, cover_i} = props
-  return(
-      <h3>{title}</h3>
-  )
 }
 
 
