@@ -44,7 +44,7 @@ function App() {
       )
       :(
         <section className='Items_List'>
-          <div style={{width:"100%", background:"3d3d3d"}}>
+          <div style={{width:"100%", background:"whitesmoke"}}>
           {
             books.map((book, index)=>{
               if(books.length === index+1){
