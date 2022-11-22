@@ -14,7 +14,6 @@ function importAll(r) {
 const Images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
 function App() {
-  const [title, setTitle] = useState();
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -23,15 +22,10 @@ function App() {
 
   const Books = useSelector((state)=>state.books.books)
 
-  useEffect(()=>{
-    Books.length===0
-    ?setTitle('Hello!')
-    :setTitle('Library Management')
-  }, [Books, title, setTitle])
-  
+
   return (
     <>
-    <nav className='title'>{title}</nav>
+    <nav className='title'>Library Managment</nav>
     {
       Books.length === 0
       ?(
