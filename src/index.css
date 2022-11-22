@@ -17,3 +17,41 @@ code {
   font-size: 5vh;
   padding-top: 1vh;
 }
+
+.Items_List {
+  width: 90vm;
+  max-width: 1170px;
+  margin: 5rem auto;
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+  /* background: rgb(231, 228, 228); */
+  }
+@media screen {
+  .Items_List {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  }
+  
+  .Items_List a{
+  text-decoration: none;
+  } 
+  
+  .Item {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  
+  margin-left: 15px;
+  }
+  
+  .Item h1 {
+  color: black;
+  background: white;
+  }
+  
+  .Item img {
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  }

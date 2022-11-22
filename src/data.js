@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     books:[
         {
           "author": "Chinua Achebe",
